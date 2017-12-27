@@ -4,11 +4,9 @@ import random
 import os
 import pickle
 import random
+from overwatch import *
 # 가위바위보 전적
-bangster_w = 0
-bangster_l = 0
-dolsoe_w = 0
-dolsoe_l = 0
+
 client = discord.Client()
 @client.event
 async def onn_ready():
@@ -46,10 +44,6 @@ async def on_message(message):
         await client.send_message(message.channel, 'ㅋㅋㅋ')
     elif message.content.startswith('79식'):
         await client.send_message(message.channel, '최고!')
-    elif message.content.startswith('끝말잇기'):
-        await client.send_message(message.channel, '게임 시작입니다.')
-        await client.send_message(message.channel, '제가 먼저 시작합니다.')
-        await client.send_message(message.channel, '기차' )
     elif message.content.startswith('방구리'):
         await client.send_message(message.channel, '중2병 호구 새퀴 + 리퍼 장인(?)')
     elif message.content.startswith('춤추는애벌레'):
@@ -73,6 +67,12 @@ async def on_message(message):
         await client.send_message(message.channel, '절대란건 없더군요')
     elif message.content.startswith('가즈아'):
         await client.send_message(message.channel, '가즈아ㅏㅏㅏ')
+    elif message.content.startswith('옵치전적'):
+        hero_time = Overwatch(battletag = v[4:], mode = 'play_time')
+        results = hero_time()
+        await client.send_message(message.channel, str(results))
+    elif message.content.startswith('수정요청'):
+        await client.send_message(message.channel, 'https://github.com/eogkswkd/DolsoeBot/blob/master/Dolsoerun.py')
     elif message.content.startswith('위키'):
         while v.find(' ') != -1:
             v = v.replace(' ','%20')
@@ -119,6 +119,8 @@ async def on_message(message):
                 await client.send_message(message.channel, '하하 제가 이겼습니다. 가위이거든요.')
         else:
             await client.send_message(message.channel, '오 제가 졌습니다. 바위거든요')
+
+#러시안 룰렛
     elif message.content.startswith('러시안룰렛'):
         if z == 2:
             await client.send_message(message.channel, '당신은 사망했습니다.')
@@ -130,6 +132,7 @@ async def on_message(message):
             await client.send_message(message.channel, '당신은 생존했습니다.')
             i -= 1
             await client.send_message(message.channel, '총은 ' + str(i) + '발 남았습니다.')
+            
     if message.content.startswith('그만 쪼개'):
         await client.send_message(message.channel, '네;;;')
         await asyncio.sleep(5)
