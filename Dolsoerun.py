@@ -32,7 +32,7 @@ async def on_message(message):
         await client.send_message(message.channel, '#끝말잇기, #춤추는애벌레, #코그모따까리')
         await client.send_message(message.channel, '#위키[검색], #구글,#!돌쇠,#짜잔')
         await client.send_message(message.channel, '#깐뜨롤, #!가위,#!바위,#!보')
-        await client.send_message(message.channel, '#경마, #경마_현재돈')
+        await client.send_message(message.channel, '#경마x번말')
     elif message.content.startswith('................ㅠㅗㅓㅓㄴ언엊벼ㅡㄴ월ㅇㅗ너ㅣ로ㅠㅂㅈㄷ,ㅡㅈㅂㅜㅁㅇㄴㄹㄻㄴㅁㄹㅀㅁㅇ'):
         await client.send_message(message.channel, '......')
     elif message.content.startswith('버전'):
