@@ -98,27 +98,27 @@ async def on_message(message):
     elif message.content.startswith('!가위'):
         rate = random.randrange(0,3) # 0 가위     1 주먹      2 보
         if rate == 0:
-            await client.send_message(message.channel, '비겼습니다. 지도 가위입니다.')
+            await client.send_message(message.channel, "비겼습니다. 저도 '가위'입니다.")
         elif rate == 1:
-                await client.send_message(message.channel, '하하 제가 이겼습니다. 바위거든요.')
+                await client.send_message(message.channel, '''하하 제가 이겼습니다. '바위'거든요.''')
         else:
-            await client.send_message(message.channel, '오 제가 졌습니다. 보거든요')
+            await client.send_message(message.channel, '''오 제가 졌습니다. '보'거든요''')
     elif message.content.startswith('!바위'):
         rate = random.randrange(0,3) # 0 가위     1 주먹      2 보
         if rate == 0:
-            await client.send_message(message.channel, '졌습니다. 저는 가위입니다.')
+            await client.send_message(message.channel, '''졌습니다. 저는 '가위'입니다.''')
         elif rate == 1:
-                await client.send_message(message.channel, '하하 제가 이겼습니다. 보이거든요.')
+                await client.send_message(message.channel, '''하하 제가 이겼습니다. '보'거든요.''')
         else:
-            await client.send_message(message.channel, '오 제가 이겼습니다. 보거든요')
+            await client.send_message(message.channel, '''오 제가 이겼습니다. '보'거든요''')
     elif message.content.startswith('!보'):
         rate = random.randrange(0,3) # 0 가위     1 주먹      2 보
         if rate == 0:
-            await client.send_message(message.channel, '비겼습니다. 지도 보입니다.')
+            await client.send_message(message.channel, '''비겼습니다. 저도 '보'입니다.''')
         elif rate == 1:
-                await client.send_message(message.channel, '하하 제가 이겼습니다. 가위이거든요.')
+                await client.send_message(message.channel, '''하하 제가 이겼습니다. '가위'거든요.''')
         else:
-            await client.send_message(message.channel, '오 제가 졌습니다. 바위거든요')
+            await client.send_message(message.channel, '''오 제가 졌습니다. '바위'거든요''')
 
 #러시안 룰렛
     elif message.content.startswith('러시안룰렛'):
