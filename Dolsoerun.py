@@ -128,10 +128,13 @@ async def on_message(message):
         elif i == 1:
             await client.send_message(message.channel, '당신은 사망했습니다.')
             i = 5
+        elif i == 2:
+            await client.send_message(message.channel, '아직 한 발 남았다.')
         else:
             await client.send_message(message.channel, '당신은 생존했습니다.')
             i -= 1
             await client.send_message(message.channel, '총은 ' + str(i) + '발 남았습니다.')
+        
             
     if message.content.startswith('그만 쪼개'):
         await client.send_message(message.channel, '네;;;')
