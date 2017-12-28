@@ -148,6 +148,9 @@ async def on_message(message):
             await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             if n == 1:
                 await client.send_message(message.channel, '1번말이 1등입니다.')
+                await client.send_message(message.channel, '200 지급')
+                money_horse += 200
+                await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             elif n == 2:
                 await client.send_message(message.channel, '1번말은 2등입니다.')
             elif n == 3:
@@ -155,8 +158,14 @@ async def on_message(message):
             elif n == 4:
                 await client.send_message(message.channel, '1번말은 4등입니다.')
         elif h == '2번말':
+            money_horse -= 50
+            await client.send_message(message.channel, '50원 지불' )
+            await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             if n == 1:
                 await client.send_message(message.channel, '2번말이 1등입니다.')
+                await client.send_message(message.channel, '200 지급')
+                money_horse += 200
+                await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             elif n == 2:
                 await client.send_message(message.channel, '2번말은 2등입니다.')
             elif n == 3:
@@ -164,8 +173,14 @@ async def on_message(message):
             elif n == 4:
                 await client.send_message(message.channel, '2번말은 4등입니다.')
         elif h == '3번말':
+            money_horse -= 50
+            await client.send_message(message.channel, '50원 지불' )
+            await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             if n == 1:
                 await client.send_message(message.channel, '3번말이 1등입니다.')
+                await client.send_message(message.channel, '200 지급')
+                money_horse += 200
+                await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             elif n == 2:
                 await client.send_message(message.channel, '3번말은 2등입니다.')
             elif n == 3:
@@ -173,14 +188,24 @@ async def on_message(message):
             elif n == 4:
                 await client.send_message(message.channel, '3번말은 4등입니다.')
         elif h == '4번말':
+            money_horse -= 50
+            await client.send_message(message.channel, '50원 지불' )
+            await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             if n == 1:
                 await client.send_message(message.channel, '4번말이 1등입니다.')
+                await client.send_message(message.channel, '200 지급')
+                money_horse += 200
+                await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
             elif n == 2:
                 await client.send_message(message.channel, '4번말은 2등입니다.')
             elif n == 3:
                 await client.send_message(message.channel, '4번말은 3등입니다.')
             elif n == 4:
-                await client.send_message(message.channel, '4번말은 4등입니다.')    
+                await client.send_message(message.channel, '4번말은 4등입니다.')   
+        else:
+            await client.send_message(message.channel, '1~4번말까지만 선택가능 합니다.')
+            
+            
     if message.content.startswith('그만 쪼개'):
         await client.send_message(message.channel, '네;;;')
         await asyncio.sleep(5)
