@@ -140,102 +140,102 @@ async def on_message(message):
  
 #경마
     elif message.contwnt.startswith('경마'):
-    	await client.send_message(message.channel, '경마게임이 시작됩니다.  배팅 금액은 100원입니다. 승리시 500원을 얻습니다. 말을 선택해 주세요. ex.1번말')
-   	 elif message.content.startswith('1번말'):
-   	 	money_horse = money_horse - 100
-   	 	horse = randrange(1,5)
-   	 	if horse == 1: #{0} 이런거 써서 단축시킬 수 있을거 같은데 까먹었다.
-   	 		await client.send_message(message.channel, '1번말이 1등으로 들어왔습니다!')
-   	 		money_horse = money_horse + 600
-   	 	elif horse == 2:
-   	 		await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
-   	 	elif horse == 3:
-   	 		await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
+        await client.send_message(message.channel, '경마게임이 시작됩니다.  배팅 금액은 100원입니다. 승리시 500원을 얻습니다. 말을 선택해 주세요. ex.1번말')
+            elif message.content.startswith('1번말'):
+                money_horse = money_horse - 100
+                horse = randrange(1,5)
+                if horse == 1: #{0} 이런거 써서 단축시킬 수 있을거 같은데 까먹었다.
+                    await client.send_message(message.channel, '1번말이 1등으로 들어왔습니다!')
+                    money_horse = money_horse + 600
+                elif horse == 2:
+                    await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
+                elif horse == 3:
+                    await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
+               elif horse == 4:
+                   await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
+                elif horse == 4:
+                    await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
 
-   	  elif message.content.startswith('2번말'):
-   	 	horse = randrange(1,5)
-   	 	money_horse = money_horse - 100
-   	 	if horse == 1: 
-   	 		await client.send_message(message.channel, '1번말이 1등으로 들어왔네요')
-   	 	elif horse == 2:
-   	 		await client.send_message(message.channel, '2번말이 1등으로 들어왔습니다!')
-   	 		money_horse = money_horse + 600
-   	 	elif horse == 3:
-   	 		await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
+            elif message.content.startswith('2번말'):
+                horse = randrange(1,5)
+                money_horse = money_horse - 100
+                    if horse == 1: 
+                        await client.send_message(message.channel, '1번말이 1등으로 들어왔네요')
+                    elif horse == 2:
+                        await client.send_message(message.channel, '2번말이 1등으로 들어왔습니다!')
+                        money_horse = money_horse + 600
+                    elif horse == 3:
+                        await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
 
-   	  elif message.content.startswith('2번말'):
-   	 	horse = randrange(1,5)
-   	 	money_horse = money_horse - 100
-   	 	if horse == 1: 
-   	 		await client.send_message(message.channel, '1번말이 1등으로 들어왔습니다!')
-   	 	elif horse == 2:
-   	 		await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
-   	 		money_horse = money_horse + 600
-   	 	elif horse == 3:
-   	 		await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
+            elif message.content.startswith('2번말'):
+                horse = randrange(1,5)
+                money_horse = money_horse - 100
+                    if horse == 1: 
+                        await client.send_message(message.channel, '1번말이 1등으로 들어왔습니다!')
+                    elif horse == 2:
+                        await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
+                        money_horse = money_horse + 600
+                    elif horse == 3:
+                        await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
    	 			
 
-   	 elif message.content.startswith('3번말'):
-   	 	horse = randrange(1,5)
-   	 	money_horse = money_horse - 100
-   	 	if horse == 1: 
-   	 		await client.send_message(message.channel, '1번말이 1등으로 들어왔네요.')
-   	 	elif horse == 2:
-   	 		await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
-   	 		money_horse = money_horse + 600
-   	 	elif horse == 3:
-   	 		await client.send_message(message.channel, '3번말이 1등으로 들어왔습니다!')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
+            elif message.content.startswith('3번말'):
+                horse = randrange(1,5)
+                money_horse = money_horse - 100
+                    if horse == 1: 
+                        await client.send_message(message.channel, '1번말이 1등으로 들어왔네요.')
+                    elif horse == 2:
+                        await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
+                        money_horse = money_horse + 600
+                    elif horse == 3:
+                        await client.send_message(message.channel, '3번말이 1등으로 들어왔습니다!')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
 
-   	  elif message.content.startswith('4번말'):
-   	 	horse = randrange(1,5)
-   	 	money_horse = money_horse - 100
-   	 	if horse == 1: 
-   	 		await client.send_message(message.channel, '1번말이 1등으로 들어왔네요.')
-   	 	elif horse == 2:
-   	 		await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
-   	 		money_horse = money_horse + 600
-   	 	elif horse == 3:
-   	 		await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '4번말이 1등으로 들어왔습니다!')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
+            elif message.content.startswith('4번말'):
+                    horse = randrange(1,5)
+                    money_horse = money_horse - 100
+                    if horse == 1: 
+                        await client.send_message(message.channel, '1번말이 1등으로 들어왔네요.')
+                    elif horse == 2:
+                        await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
+                        money_horse = money_horse + 600
+                    elif horse == 3:
+                        await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '4번말이 1등으로 들어왔습니다!')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '5번말이 1등으로 들어왔네요.')
 
-   	  elif message.content.startswith('5번말'):
-   	 	horse = randrange(1,5)
-   	 	money_horse = money_horse - 100
-   	 	if horse == 1: 
-   	 		await client.send_message(message.channel, '1번말이 1등으로 들어왔네요.')
-   	 	elif horse == 2:
-   	 		await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
-   	 		money_horse = money_horse + 600
-   	 	elif horse == 3:
-   	 		await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
-   	 	elif horse == 4:
-   	 		await client.send_message(message.channel, '5번말이 1등으로 들어왔습니다!')
+            elif message.content.startswith('5번말'):
+                    horse = randrange(1,5)
+                    money_horse = money_horse - 100
+                    if horse == 1: 
+                        await client.send_message(message.channel, '1번말이 1등으로 들어왔네요.')
+                    elif horse == 2:
+                        await client.send_message(message.channel, '2번말이 1등으로 들어왔네요.')
+                        money_horse = money_horse + 600
+                    elif horse == 3:
+                        await client.send_message(message.channel, '3번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '4번말이 1등으로 들어왔네요.')
+                    elif horse == 4:
+                        await client.send_message(message.channel, '5번말이 1등으로 들어왔습니다!')
 
     elif message.startswith('경마_현재돈'):
-    	await client.send_message(message.channel, '현재 돈은 '+ str(money_horse) +' 원입니다.')
+        await client.send_message(message.channel, '현재 돈은 '+ str(money_horse) +' 원입니다.')
     elif message.startswith('경마_돈추가'):
-    	money_horse = money_horse + 1000
+        money_horse = money_horse + 1000
 
 
     if message.content.startswith('그만 쪼개'):
