@@ -69,7 +69,7 @@ async def on_message(message):
         await client.send_message(message.channel, '불편;;')
     elif message.content.startswith('그런데'):
         await client.send_message(message.channel, '짜잔! 절대란건 없군요')
-    elif message.content.startswith('가즈아'):
+    elif message.content.startswith('가자'):
         await client.send_message(message.channel, '가즈아ㅏㅏㅏ')
     elif message.content.startswith('옵치전적'):
         hero_time = Overwatch(battletag = v[4:], mode = 'play_time')
@@ -205,8 +205,10 @@ async def on_message(message):
         else:
             await client.send_message(message.channel, '1~4번말까지만 선택가능 합니다.')
             
+#끝말잇기 가즈아ㅏㅏㅏ
+        f = open
             
-    elif message.content.startswith('경마돈추가'):
+    elif message.content.startswith('ㄱㅁ돈추가'):
         money_horse += 200
         await client.send_message(message.channel, '치트를 사용해 돈을 추가하였습니다.')
         await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
