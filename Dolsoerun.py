@@ -4,6 +4,7 @@ import random
 import os
 import pickle
 import random
+import enchant
 from overwatch import *
 # 가위바위보 전적
 
@@ -14,11 +15,14 @@ async def onn_ready():
     print(client.user.name)
     print(clint.user.id)
     print('------')
-
+d = enchant.Dict("en_us")    
+f = open('C:\\Users\\user\Desktop\Discord Bot\system.txt','r') #끝말잇기
+Line = f.readlines()# 끝말잇기
 money_horse = 1000 # 경마 기본 돈
 i = 5
 @client.event
 async def on_message(message):
+    global Line
     global money_horse
     global i
     x = random.randrange(1,101)
@@ -32,11 +36,11 @@ async def on_message(message):
         await client.send_message(message.channel, '#끝말잇기, #춤추는애벌레, #코그모따까리')
         await client.send_message(message.channel, '#위키[검색], #구글,#!돌쇠,#짜잔')
         await client.send_message(message.channel, '#깐뜨롤, #!가위,#!바위,#!보')
-        await client.send_message(message.channel, '#경마x번말')
+        await client.send_message(message.channel, '#경마x번말, #ㄲㅁㅇㄱ[말]')
     elif message.content.startswith('................ㅠㅗㅓㅓㄴ언엊벼ㅡㄴ월ㅇㅗ너ㅣ로ㅠㅂㅈㄷ,ㅡㅈㅂㅜㅁㅇㄴㄹㄻㄴㅁㄹㅀㅁㅇ'):
         await client.send_message(message.channel, '......')
     elif message.content.startswith('버전'):
-        await client.send_message(message.channel, '돌쇠봇 4호기.')
+        await client.send_message(message.channel, '돌쇠봇 7호기(끝)')
     elif message.content.startswith('보이루'):
         await client.send_message(message.channel, '가조쿠이시군요.')
     elif message.content.startswith('방가방가'):
@@ -49,8 +53,12 @@ async def on_message(message):
         await client.send_message(message.channel, 'ㅋㅋㅋ')
     elif message.content.startswith('79식'):
         await client.send_message(message.channel, '최고!')
+    elif message.content.startswith('쁍'):
+        await client.send_message(message.channel, 'ㅗ')
     elif message.content.startswith('방구리'):
         await client.send_message(message.channel, '중2병 호구 새퀴 + 리퍼 장인(?)')
+    elif message.content.startswith('맥크리따까리'):
+        await client.send_message(message.channel, '킬딸러 호구 새퀴')
     elif message.content.startswith('춤추는애벌레'):
         await client.send_message(message.channel, 'http://www.op.gg/summoner/userName=춤추는애벌레')
     elif message.content.startswith('방스터'):
@@ -63,6 +71,8 @@ async def on_message(message):
         await client.send_message(message.channel, '보도우 장인')
     elif message.content.startswith('!돌쇠'):
         await client.send_message(message.channel, '돌쇠봇의 대감이')
+    elif message.content.startswith('돌쇠봇 멍청이'):
+        await client.send_message(message.channel, '응 니얼굴')        
     elif message.content.startswith('쩝쩝'):
         await client.send_message(message.channel, '쩝쩝쩝쩝....')
     elif message.content.startswith('그래 그리 쉽지는 않겠지'):
@@ -132,8 +142,6 @@ async def on_message(message):
         elif i == 1:
             await client.send_message(message.channel, '당신은 사망했습니다.')
             i = 5
-        elif i == 2:
-            await client.send_message(message.channel, '아직 한 발 남았다.')
         else:
             await client.send_message(message.channel, '당신은 생존했습니다.')
             i -= 1
@@ -206,7 +214,21 @@ async def on_message(message):
             await client.send_message(message.channel, '1~4번말까지만 선택가능 합니다.')
             
 #끝말잇기 가즈아ㅏㅏㅏ
-        f = open
+    elif message.content.startswith('ㄲㅁㅇㄱ'):
+        count = 0
+        s = v[-1]
+        if d.check(v[4:]) == True:
+            for i in Line:
+                if i[0] == s:
+                    await client.send_message(message.channel, i)
+                    Line.remove(i)
+                    count = 1
+                    break
+            if count == 0:
+                await client.send_message(message.channel, '제가 졌습니다.')
+        else:
+            await client.send_message(message.channel, '단어를 찾을 수 없습니다.')
+            await client.send_message(message.channel, '제가 이겼군요!')
             
     elif message.content.startswith('ㄱㅁ돈추가'):
         money_horse += 200
@@ -219,3 +241,4 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, '이제 사용하실 수 있습니다.')
 client.run('Mzk1NDgzNDEyMzAwODI0NTc2.DSTi2w.S7rxqzwuu_356ieRqW3TK9EsB4s')
+
