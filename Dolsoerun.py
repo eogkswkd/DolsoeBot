@@ -206,6 +206,12 @@ async def on_message(message):
             await client.send_message(message.channel, '1~4번말까지만 선택가능 합니다.')
             
             
+    elif message.content.startswith('경마돈추가'):
+        money_horse += 200
+        await client.send_message(message.channel, '치트를 사용해 돈을 추가하였습니다.')
+        await client.send_message(message.channel, '현재 금액 ' + str(money_horse))
+            
+            
     if message.content.startswith('그만 쪼개'):
         await client.send_message(message.channel, '네;;;')
         await asyncio.sleep(5)
