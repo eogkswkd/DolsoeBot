@@ -248,5 +248,4 @@ async def on_message(message):
         await client.send_message(message.channel, '네;;;')
         await asyncio.sleep(5)
         await client.send_message(message.channel, '이제 사용하실 수 있습니다.')
-client.run('Mzk1NDgzNDEyMzAwODI0NTc2.DSTi2w.S7rxqzwuu_356ieRqW3TK9EsB4s')
 
