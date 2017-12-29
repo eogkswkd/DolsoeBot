@@ -11,7 +11,7 @@ from overwatch import *
 client = discord.Client()
 @client.event
 async def onn_ready():
-    print("돌쇠 인사 오지게 박습니다.")
+    print("죽음이 너의 곁을 걷는다.")
     print(client.user.name)
     print(clint.user.id)
     print('------')
@@ -36,7 +36,7 @@ async def on_message(message):
         await client.send_message(message.channel, '#끝말잇기, #춤추는애벌레, #코그모따까리')
         await client.send_message(message.channel, '#위키[검색], #구글,#!돌쇠,#짜잔')
         await client.send_message(message.channel, '#깐뜨롤, #!가위,#!바위,#!보')
-        await client.send_message(message.channel, '#경마x번말, #ㄲㅁㅇㄱ[말]')
+        await client.send_message(message.channel, '#경마x번말, #ㄲㅁㅇㄱ[말],#방스터터')
     elif message.content.startswith('................ㅠㅗㅓㅓㄴ언엊벼ㅡㄴ월ㅇㅗ너ㅣ로ㅠㅂㅈㄷ,ㅡㅈㅂㅜㅁㅇㄴㄹㄻㄴㅁㄹㅀㅁㅇ'):
         await client.send_message(message.channel, '......')
     elif message.content.startswith('버전'):
@@ -56,7 +56,7 @@ async def on_message(message):
     elif message.content.startswith('쁍'):
         await client.send_message(message.channel, 'ㅗ')
     elif message.content.startswith('방구리'):
-        await client.send_message(message.channel, '중2병 호구 새퀴 + 리퍼 장인(?)')
+        await client.send_message(message.channel, '리퍼 장인')
     elif message.content.startswith('맥크리따까리'):
         await client.send_message(message.channel, '킬딸러 호구 새퀴')
     elif message.content.startswith('춤추는애벌레'):
@@ -81,6 +81,14 @@ async def on_message(message):
         await client.send_message(message.channel, '짜잔! 절대란건 없군요')
     elif message.content.startswith('가자'):
         await client.send_message(message.channel, '가즈아ㅏㅏㅏ')
+    elif message.content.startswith('ㄴㅇㄱ'):
+        await client.send_message(message.channel, '느금마')
+    elif message.content.startswith('니얼굴'):
+        await client.send_message(message.channel, '느금마')
+    elif message.content.startswith('sdr'):
+        await client.send_message(message.channel, '느금마')
+    elif message.content.startswith('방스터'):
+        await client.send_message(message.channel, '방스터봇 호스터')
     elif message.content.startswith('옵치전적'):
         hero_time = Overwatch(battletag = v[4:], mode = 'play_time')
         results = hero_time()
