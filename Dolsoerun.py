@@ -16,7 +16,7 @@ async def onn_ready():
     print(clint.user.id)
     print('------')
 d = enchant.Dict("en_us")    
-f = open('C:\\Users\\user\Desktop\Discord Bot\system.txt','r') #끝말잇기
+f = open(' C:\\Users\bangj\Downloads\DolsoeBot-master\DolsoeBot-master\system.txt') #끝말잇기
 Line = f.readlines()# 끝말잇기
 money_horse = 1000 # 경마 기본 돈
 i = 5
